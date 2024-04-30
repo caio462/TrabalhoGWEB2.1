@@ -1,0 +1,53 @@
+<!-- Para executar o código, tenha o node baixado, e execute o comando "npm install", para instalar as dependencias, e "node server.js" dentro do diretório Maiara_trabalho_02 para iniciar o servidor local -->
+<!-- Com o python 3 você também consegue abrir o localhost com o comando "python3 -m http.server" dentro do diretório servidor (Nesse caso pode excluir os demais arquivos que não estão na pasta servidor)-->
+
+<!-- Ao executar, seu site pode ser acessado pelo link: http://localhost:3000 (Caso tenha usado o Node) ou http://localhost:8000 (Caso tenha usado o python)-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Meus Filmes</h1>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Pesquisar filmes..." />
+        </div>
+        <div class="favBar">
+            <h3 class="textFavBar">Favoritos</h3>
+            <div id="filmesFavoritadosContainer">
+                <!-- Aqui serão exibidos os filmes favoritados -->
+            </div>
+        </div>
+        <div class="FavBar">
+            <h3 class="textFavBar">Lista</h3>
+            <div id="filmesNaListaContainer">
+                <!-- Aqui serão exibidos os filmes adicionados a lista -->
+            </div>
+        </div>
+        <div class="filmes">
+            <!-- Aqui serão exibidos os demais filmes separados por categoria -->
+            </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+        <video id="filmeVideo" width="100%" controls>
+            <source src="./video.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo MP4.
+        </video>
+    </div>
+        <div class="modal-footer">
+        <button class="btn modal-close">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
